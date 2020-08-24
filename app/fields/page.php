@@ -7,7 +7,7 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $page = new FieldsBuilder('page');
 
 $page
-    ->setLocation('page_template', '==', 'views/template-custom.blade.php');
+    ->setLocation('post_type', '==', 'page');
   
 $page
     ->addTab('hero', ['label' => 'hero', 'placement' => 'left'])

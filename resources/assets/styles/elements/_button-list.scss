@@ -1,0 +1,24 @@
+.buttons-list {
+  @extend %reset-list;
+
+  width: 100%;
+  display: flex;
+
+  @include mediaTo(sm) {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-right: $m + $xs;
+
+    @include mediaTo(sm) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: $s;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

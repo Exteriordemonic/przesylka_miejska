@@ -1,8 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-  @while(have_posts()) @php the_post() @endphp
-    @include('partials.page-header')
-    @include('partials.content-page')
-  @endwhile
+  @include('sections.hero')
+  @include('sections.localization')
+  @include('sections.brands')
+  @include('sections.flex')
+  @include('sections.steps')
+  @include('sections.extras')
+  @include('sections.for')
+  @include('sections.quotes')
+  @include('sections.numbers')
+  @include('sections.cta')
 @endsection

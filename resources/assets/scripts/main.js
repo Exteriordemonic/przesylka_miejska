@@ -12,7 +12,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 
 // import Components
-import Hero from './components/hero';
+import citySwap from './components/citySwap';
 import Testimonials from './components/testimonials';
 
 /** Populate Router instance with DOM routes */
@@ -30,7 +30,7 @@ jQuery(document).ready(() => {
   routes.loadEvents();
 
   setTimeout(() => {
-    Hero.init();
+    citySwap.init();
     Testimonials.init();
 
     window.dispatchEvent(new Event('resize'));

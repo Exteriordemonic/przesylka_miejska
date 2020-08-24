@@ -1,5 +1,6 @@
 .section {
   padding: $l+$s 0;
+  position: relative;
 
   /* stylelint-disable */
   &--nsb {
@@ -12,9 +13,28 @@
 
   &--dark {
     background-color: $dark;
+    color: $light;
   }
 
   &--special {
     background-color: $special;
+    color: $light;
+  }
+
+  &__bg {
+    @extend %absolute;
+
+    z-index: 0;
+    opacity: 0.2;
+    margin: 0;
+  }
+
+  &__image {
+    @extend %image;
+  }
+
+  .container {
+    position: relative;
+    z-index: 10;
   }
 }

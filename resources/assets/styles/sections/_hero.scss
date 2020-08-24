@@ -1,1 +1,78 @@
+.hero {
+  @extend %flex;
 
+  height: 100vh;
+  overflow: hidden;
+
+  &__wrapper {
+    @extend %flex;
+
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &__title {
+    @extend %title;
+
+    margin-bottom: $xl;
+  }
+
+  &__cities {
+    @extend %reset-list;
+
+    display: inline-block;
+    position: relative;
+  }
+
+  &__city {
+    @extend %absolute;
+
+    right: unset;
+    white-space: nowrap;
+    animation: goAway $transition*2 both;
+    display: inline;
+
+    &::before {
+      @extend %pseudo;
+
+      @include cssLock("bottom", 360, 1920, (-12, -24));
+
+      top: unset;
+      width: 0%;
+      height: $gutter * 0.4;
+      background-color: $special;
+      transition: 2s;
+    }
+
+    &.-is-active {
+      animation: driveIn $transition $transition both;
+
+      &::before {
+        width: 100%;
+      }
+    }
+
+    &:first-child() {
+      position: relative;
+    }
+  }
+}
+
+@keyframes goAway {
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes driveIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

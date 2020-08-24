@@ -5,7 +5,7 @@ const Testimonials = {
     this.testimonials = document.querySelectorAll('[data-testimonials]');
     this.flickity;
 
-    if (this.testimonials) {
+    if (this.testimonials.length) {
       this.initTestimonials();
     }
   },

@@ -8,7 +8,7 @@
 
   font-weight: $fw-bold;
 
-  @include cssLock("font-size", 360, 1920, (35, 70));
+  @include cssLock("font-size", 360, 1920, (28, 70));
 }
 
 %sectionTitle {

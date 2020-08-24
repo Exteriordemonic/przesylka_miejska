@@ -1,1 +1,62 @@
+.button {
+  @extend %button;
 
+  padding: $s $m;
+  border-radius: $xs;
+  border: $gutter*0.2 solid $special;
+  background-color: transparent;
+  color: $light;
+  min-width: $xxl*2;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  @include mediaTo(sm) {
+    width: 100%;
+  }
+
+  &::before {
+    @extend %pseudo;
+
+    right: unset;
+    width: 0;
+    background-color: darken($special, 10);
+    transition: $transition;
+    z-index: -1;
+  }
+
+  &::after {
+    @extend %pseudo;
+
+    width: 100%;
+    z-index: -2;
+    background-color: $special;
+  }
+
+  &:hover {
+    color: $light;
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &--transparent {
+    color: $light;
+    border-color: currentColor;
+    background-color: transparent;
+
+    &::before {
+      background-color: $special;
+    }
+
+    &::after {
+      background-color: transparent;
+    }
+
+    &:hover {
+      color: $light;
+    }
+  }
+}
