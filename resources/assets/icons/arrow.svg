@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="203.572" height="168.713" viewBox="0 0 203.572 168.713">
+  <g id="Arrow_Copy" data-name="Arrow Copy" transform="matrix(0.995, 0.105, -0.105, 0.995, 9.334, -1.088)">
+    <path id="Path_2" data-name="Path 2" d="M0,70.032S61.957-9.594,185.205.964" transform="matrix(0.875, 0.485, -0.485, 0.875, 33.952, 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3" stroke-dasharray="0 11"/>
+    <g id="small-right" transform="translate(195.019 83.99) rotate(17)">
+      <path id="Path" d="M1.729,12.2,0,10.609,4.892,6.1,0,1.593,1.729,0,7.486,5.3a1.065,1.065,0,0,1,0,1.593Z" transform="translate(1.698 0) rotate(8)" fill="#fff" stroke="#fff" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

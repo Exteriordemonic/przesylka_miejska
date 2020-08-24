@@ -1,0 +1,27 @@
+/* stylelint-disable */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @extend %body;
+}
+
+
+main {
+  @include mediaTo(sm) {
+    margin-top: 0 !important;
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
+html #wpadminbar {
+  opacity: 0.1;
+
+  &:hover {
+    opacity: 1;
+  }
+}

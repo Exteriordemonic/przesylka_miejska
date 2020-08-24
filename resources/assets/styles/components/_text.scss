@@ -1,0 +1,67 @@
+%resetSpaces {
+  margin: 0;
+}
+
+%title {
+  @extend %body;
+  @extend %resetSpaces;
+
+  font-weight: $fw-bold;
+
+  @include cssLock("font-size", 360, 1920, (35, 70));
+}
+
+%sectionTitle {
+  @extend %body;
+  @extend %resetSpaces;
+
+  font-weight: $fw-bold;
+
+  @include cssLock("font-size", 360, 1920, (18, 35));
+}
+
+%sectionSubtitle {
+  @extend %body;
+  @extend %resetSpaces;
+
+  @include cssLock("font-size", 360, 1920, (18, 21));
+}
+
+%textMajor {
+  @extend %body;
+  @extend %resetSpaces;
+
+  @include cssLock("font-size", 360, 1920, (16, 18));
+
+  line-height: 1.9;
+}
+
+%text {
+  @extend %body;
+  @extend %resetSpaces;
+
+  @include cssLock("font-size", 360, 1920, (12, 14));
+
+  line-height: 1.9;
+}
+
+%numbers {
+  @extend %body;
+  @extend %resetSpaces;
+
+  @include cssLock("font-size", 360, 1920, (35, 50));
+}
+
+%link {
+  @extend %body;
+  @extend %resetSpaces;
+
+  @include cssLock("font-size", 360, 1920, (16, 18));
+}
+
+%button {
+  @extend %body;
+  @extend %resetSpaces;
+
+  @include cssLock("font-size", 360, 1920, (16, 18));
+}
