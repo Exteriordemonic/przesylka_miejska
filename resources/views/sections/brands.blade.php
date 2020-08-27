@@ -4,8 +4,17 @@
 
 <section class="section {{ $class }}">
     <div class="container {{ $class }}__wrapper">
-        <h1 class="title">
-            {{ $class }}
-        </h1>
+        @hasfield('brands')
+        <ul class="{{ $class }}__list">
+            @fields('brands')
+            <li class="{{ $class }}__item">
+                <a href="@sub('link')">
+                    @set($image, get_sub_field('image')['ID'])
+                    @image($image)
+                </a>
+            </li>
+            @endfields
+        </ul>
+        @endfield
     </div>
 </section>

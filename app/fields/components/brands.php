@@ -6,5 +6,8 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $brands = new FieldsBuilder('brands');
   
 $brands
-    ->addText('brands');
+    ->addRepeater('brands')
+        ->addUrl('link', ['label'=>'Link'])
+        ->addImage('image', ['label'=>'Logo'])
+    ;
 return $brands;
