@@ -1,6 +1,7 @@
 // import external dependencies
 import 'jquery';
 import AOS from 'aos';
+import 'select2';
 
 // import everything from autoload
 import './autoload/**/*'
@@ -34,6 +35,10 @@ jQuery(document).ready(() => {
     Testimonials.init();
 
     window.dispatchEvent(new Event('resize'));
+    $('.select').select2({
+      minimumResultsForSearch: -1,
+      placeholder: 'Wybierz miejscowość z listy',
+    });
     AOS.init();
   }, 300)
 });

@@ -59,4 +59,21 @@
       color: $light;
     }
   }
+
+  &--light {
+    color: $special;
+    border-color: $light;
+
+    &::before {
+      background-color: darken($special, 10);
+    }
+
+    &::after {
+      background-color: $light;
+    }
+
+    &:hover {
+      color: $light;
+    }
+  }
 }

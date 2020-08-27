@@ -1,1 +1,28 @@
+.localization {
+  padding-top: 20vh;
+  position: relative;
+  top: -20vh;
+  clip-path: polygon(0 20vh, 100% 0, 100% 100%, 0% 100%);
 
+  &__form {
+    @extend %flex;
+
+    margin-top: $l;
+    align-items: stretch;
+
+    @include mediaTo(xs) {
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .select {
+      margin-right: $l;
+
+      @include mediaTo(xs) {
+        margin-right: 0;
+        margin-bottom: $l;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,1 +1,51 @@
+.select2 {
+  @extend %text;
 
+  background-color: darken($special, 10) !important;
+  margin-right: $l !important;
+
+  @include mediaTo(xs) {
+    margin-right: 0 !important;
+    margin-bottom: $l !important;
+    width: 100%;
+  }
+
+  &-container {
+    border-radius: $xs !important;
+  }
+
+  &-selection--single {
+    background-color: darken($special, 10) !important;
+    color: $light !important;
+    border: 0 !important;
+    border-radius: $xs !important;
+    height: 100% !important;
+  }
+
+  &-selection__rendered {
+    @extend %flex;
+
+    display: flex !important;
+    height: 100% !important;
+    color: $light !important;
+  }
+
+  &-selection__arrow {
+    height: 100% !important;
+    right: $s !important;
+
+    b {
+      border-color: $light transparent transparent transparent !important;
+    }
+  }
+
+  &-results__option {
+    @extend %text;
+
+    padding-left: $l !important;
+  }
+
+  &-selection__placeholder {
+    color: $light !important;
+  }
+}

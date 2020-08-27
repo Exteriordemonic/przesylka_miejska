@@ -1,0 +1,25 @@
+.text-section {
+  text-align: center;
+  display: block;
+  margin: auto;
+
+  &__label {
+    @extend %textMajor;
+  }
+
+  &__title {
+    @extend %sectionTitle;
+
+    margin-bottom: $m;
+  }
+
+  &__text {
+    @extend %textMajor;
+
+    @include mediaTo(xs) {
+      br {
+        display: none;
+      }
+    }
+  }
+}
