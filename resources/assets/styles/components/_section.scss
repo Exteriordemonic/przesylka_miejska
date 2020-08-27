@@ -2,6 +2,10 @@
   padding: $l+$s 0 $xxl;
   position: relative;
 
+  @include mediaTo(md) {
+    padding: $l 0;
+  }
+
   /* stylelint-disable */
   &--nsb {
     padding-bottom: 0;

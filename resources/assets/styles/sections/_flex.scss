@@ -1,1 +1,34 @@
+.flex {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $xl+$l;
 
+  @include mediaTo(md) {
+    display: block;
+  }
+
+  &__wrapper {
+    @extend %absolute;
+
+    margin-bottom: 0;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    left: unset;
+
+    @include media(md) {
+      padding-right: 0;
+    }
+
+    @include mediaTo(md) {
+      position: relative;
+    }
+  }
+
+  &__image-wrapper {
+    margin-bottom: 0;
+  }
+
+  &__image {
+    @extend %image;
+  }
+}

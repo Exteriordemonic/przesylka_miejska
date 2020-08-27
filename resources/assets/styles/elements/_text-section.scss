@@ -1,7 +1,22 @@
 .text-section {
+  $root: &;
+
   text-align: center;
   display: block;
   margin: auto;
+
+  &--left {
+    text-align: left;
+
+    #{$root}__label {
+      color: $special;
+      margin-bottom: $m;
+    }
+
+    #{$root}__title {
+      margin-bottom: $l;
+    }
+  }
 
   &__label {
     @extend %textMajor;
@@ -21,5 +36,9 @@
         display: none;
       }
     }
+  }
+
+  &__button {
+    margin-top: $m;
   }
 }
