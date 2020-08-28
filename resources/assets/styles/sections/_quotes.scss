@@ -43,18 +43,23 @@
   }
 
   .flickity-button {
-    right: $l !important;
     left: unset !important;
     bottom: unset;
     top: 0;
     transform: translateY(-150%);
     background-color: transparent !important;
 
+    &.next {
+      @include cssLock("right", 1240, 1920, (100, 400));
+    }
+
     &.previous {
+      @include cssLock("right", 1240, 1920, (100, 400));
+
       transform: translateY(-150%) translateX(-150%);
     }
 
-    @include mediaTo(sm) {
+    @include mediaTo(md) {
       display: none;
     }
   }
