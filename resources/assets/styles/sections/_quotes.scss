@@ -9,7 +9,7 @@
   }
 
   &__wrapper {
-    @include media(sm) {
+    @include media(md) {
       padding-right: 0;
     }
   }

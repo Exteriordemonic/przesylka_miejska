@@ -1,1 +1,46 @@
+.numbers {
+  padding-bottom: 0;
 
+  &__list {
+    @extend %reset-list;
+
+    gap: $xl;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include mediaTo(xl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mediaTo(sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+    text-align: center;
+
+    @include mediaTo(xl) {
+      max-width: $gutter * 40;
+      margin: 0 auto;
+    }
+  }
+
+  &__number {
+    @extend %numbers;
+
+    margin-bottom: $m;
+    color: $special;
+  }
+
+  &__text {
+    @extend %textMajor;
+
+    @include mediaTo(xs) {
+      br {
+        display: none;
+      }
+    }
+  }
+}

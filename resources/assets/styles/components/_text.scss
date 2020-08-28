@@ -50,6 +50,8 @@
   @extend %resetSpaces;
 
   @include cssLock("font-size", 360, 1920, (35, 50));
+
+  font-weight: $fw-bold;
 }
 
 %link {
