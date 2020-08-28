@@ -37,3 +37,5 @@ function common_svg_media_thumbnails($response, $attachment, $meta){
     return $response;
 }
 add_filter('wp_prepare_attachment_for_js', 'common_svg_media_thumbnails', 10, 3);
+
+//http://svg.enshrined.co.uk/

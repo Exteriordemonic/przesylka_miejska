@@ -3,6 +3,13 @@
     text-align: center;
   }
 
+  &--special {
+    background-color: $special;
+    padding: $l $l $xxl;
+    color: $light;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% calc(100% - #{$xxl - $l}));
+  }
+
   &__title {
     @extend %sectionSubtitle;
 
@@ -14,5 +21,10 @@
     @extend %text;
 
     line-height: 2;
+  }
+
+  &__button {
+    z-index: 10;
+    margin-top: $l;
   }
 }

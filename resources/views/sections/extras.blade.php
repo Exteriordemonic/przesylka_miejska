@@ -4,7 +4,7 @@
 
 <section class="section {{ $class }}">
     <div class="container {{ $class }}__wrapper">
-        @set($textSection, get_field('steps_text'))
+        @set($textSection, get_field('extras_text'))
         @include('elements.text-section', [$textSection])
         @hasfield('extras_list')
         <ul class="{{ $class }}__list">

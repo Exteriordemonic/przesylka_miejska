@@ -2,6 +2,7 @@
   position: relative;
   display: block;
   width: 100%;
+  padding-bottom: $l;
 
   &__image-wrapper {
     @extend %absolute;
