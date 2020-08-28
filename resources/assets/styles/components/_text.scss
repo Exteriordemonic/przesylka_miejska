@@ -11,6 +11,15 @@
   @include cssLock("font-size", 360, 1920, (28, 70));
 }
 
+%subtitle {
+  @extend %body;
+  @extend %resetSpaces;
+
+  font-weight: $fw-bold;
+
+  @include cssLock("font-size", 360, 1920, (20, 30));
+}
+
 %sectionTitle {
   @extend %body;
   @extend %resetSpaces;

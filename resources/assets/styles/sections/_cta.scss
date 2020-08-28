@@ -1,1 +1,19 @@
+.cta {
+  position: relative;
+  margin-top: $xl;
+  color: $light;
+  padding: $xxl 0;
 
+  &__image {
+    @extend %absolute;
+    @extend %image;
+  }
+
+  &__text {
+    @extend %subtitle;
+
+    max-width: $gutter * 70;
+    margin-bottom: $l;
+    line-height: 1.5;
+  }
+}
