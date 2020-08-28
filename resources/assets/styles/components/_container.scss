@@ -1,6 +1,10 @@
 .container {
   max-width: 100%;
-  padding: 0 $xl;
+
+  @include cssLock("padding", 1240, 1920, (100, 400));
+
+  padding-top: 0;
+  padding-bottom: 0;
 
   @include mediaTo(md) {
     padding: 0 $l;

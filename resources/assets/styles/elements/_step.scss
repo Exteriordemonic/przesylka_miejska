@@ -1,0 +1,14 @@
+.step {
+  &__title {
+    @extend %sectionSubtitle;
+
+    font-weight: $fw-bold;
+    margin-bottom: $l;
+  }
+
+  &__text {
+    @extend %text;
+
+    line-height: 2;
+  }
+}

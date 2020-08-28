@@ -15,7 +15,7 @@
     @endif
     @if ($title)
     <h2 class="text-section__title">
-        {{ $title }}
+        {!! $title !!}
     </h2>
     @endif
     @if ($text)

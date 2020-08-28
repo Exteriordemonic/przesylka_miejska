@@ -1,1 +1,55 @@
+.steps {
+  $root: &;
 
+  padding-bottom: $gutter * 25;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - #{$gutter * 10}), 0% 100%);
+  position: relative;
+
+  &__list {
+    @extend %reset-list;
+
+    gap: $xl;
+    margin-top: $xxl;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include mediaTo(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:nth-child(2n) {
+      padding-top: $xxl;
+
+      @include mediaTo(md) {
+        padding-top: 0;
+      }
+
+      #{$root}__arrow {
+        bottom: 0;
+        top: unset;
+        transform: rotateX(180deg) translateX(60%) translateY(-60%);
+      }
+    }
+
+    &:last-child {
+      #{$root}__arrow {
+        display: none;
+      }
+    }
+  }
+
+  &__arrow {
+    @extend %absolute;
+
+    bottom: unset;
+    transform: translateX(60%) translateY(-50%);
+
+    @include mediaTo(md) {
+      display: none;
+    }
+  }
+}
