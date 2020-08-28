@@ -76,4 +76,14 @@
       color: $light;
     }
   }
+
+  &--icon {
+    padding: $s $s;
+
+    svg {
+      position: relative;
+      top: -$gutter * 0.1;
+      margin-right: $s;
+    }
+  }
 }

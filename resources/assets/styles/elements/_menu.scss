@@ -1,0 +1,61 @@
+.menu {
+  @extend %flex;
+
+  width: 100%;
+  justify-content: flex-end;
+
+  @include mediaTo(md) {
+    margin-bottom: $xl;
+    justify-content: center;
+  }
+
+  &__list {
+    @extend %reset-list;
+    @extend %flex;
+
+    justify-content: flex-end;
+
+    @include mediaTo(xs) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    margin-left: $l;
+
+    @include mediaTo(xs) {
+      margin-left: $s;
+      margin-right: $s;
+    }
+
+    &--space {
+      margin-left: $xl;
+
+      @include mediaTo(xs) {
+        margin-top: $xl;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+
+    &--text {
+      @include mediaTo(xs) {
+        display: none;
+      }
+    }
+
+    @include mediaTo(xs) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__text {
+    @extend %textMajor;
+
+    @include mediaTo(sm) {
+      display: none;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 <footer class="footer">
-    <div class="container">
-        <h1>Footer</h1>
+    <div class="container footer__wrapper">
+        @include('elements.logo', ['type'=>'color'])
+        @include('elements.menu', ['text'=>'show'])
     </div>
 </footer>

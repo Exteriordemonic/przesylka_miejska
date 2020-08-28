@@ -1,1 +1,11 @@
+.footer {
+  padding: $xl 0;
 
+  &__wrapper {
+    @extend %flex;
+
+    @include mediaTo(md) {
+      flex-direction: column-reverse;
+    }
+  }
+}
