@@ -2,4 +2,33 @@
   @extend %absolute;
 
   bottom: unset;
+  padding: $xl 0;
+  z-index: 10;
+
+  img {
+    @include mediaTo(xs) {
+      width: $xl;
+    }
+  }
+
+  &__wrapper {
+    @extend %flex;
+
+    @include mediaTo(xs) {
+      justify-content: flex-start;
+    }
+  }
+
+  .menu {
+    margin-bottom: 0;
+    justify-content: flex-end;
+
+    @include mediaTo(xs) {
+      display: none;
+    }
+  }
+
+  svg {
+    filter: brightness(0) invert(1);
+  }
 }

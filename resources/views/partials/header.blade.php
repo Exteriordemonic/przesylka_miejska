@@ -1,5 +1,6 @@
-<header class="header" data-header>
-    <div class="header__wrapper container">
-        <h1>HEADER</h1>
+<header class="header">
+    <div class="container header__wrapper">
+        @include('elements.logo')
+        @include('elements.menu')
     </div>
 </header>
