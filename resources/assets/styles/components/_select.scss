@@ -47,5 +47,16 @@
 
   &-selection__placeholder {
     color: $light !important;
+    padding-left: $s;
+    position: relative;
+
+    &::before {
+      @extend %absolute;
+
+      content: url("../icons/pin.svg");
+      right: unset;
+      top: $gutter * 0.3;
+      left: -$gutter * 1;
+    }
   }
 }
