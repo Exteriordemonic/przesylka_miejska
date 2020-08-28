@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: $xl+$l;
+  position: relative;
+  z-index: 10;
 
   @include mediaTo(md) {
     display: block;
@@ -34,5 +36,18 @@
 
   &__image {
     @extend %image;
+  }
+
+  &__sign {
+    @extend %absolute;
+
+    top: unset;
+    bottom: 0;
+    height: $xxl + $xl;
+    transform: translateY($xl);
+
+    @include mediaTo(md) {
+      display: none;
+    }
   }
 }

@@ -44,4 +44,19 @@
     align-items: flex-end;
     height: $xl;
   }
+
+  &__sign {
+    @extend %absolute;
+
+    top: unset;
+    left: $xl;
+    bottom: 0;
+    height: $xxl + $xl;
+    transform: translateY(0);
+    z-index: 10;
+
+    @include mediaTo(lg) {
+      display: none;
+    }
+  }
 }

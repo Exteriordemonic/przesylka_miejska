@@ -3,6 +3,7 @@
 @endphp
 
 <section class="section {{ $class }}">
+    @svg('sign', $class.'__sign')
     <div class="container {{ $class }}__wrapper">
         @set($textSection, get_field('flex_text'))
         @set($textSection['direction'], 'left')

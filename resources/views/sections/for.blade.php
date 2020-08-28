@@ -3,6 +3,7 @@
 @endphp
 
 <section class="section {{ $class }}">
+    @svg('sign', $class.'__sign')
     <div class="container {{ $class }}__wrapper">
         @set($textSection, get_field('for_text'))
         @include('elements.text-section', [$textSection])
