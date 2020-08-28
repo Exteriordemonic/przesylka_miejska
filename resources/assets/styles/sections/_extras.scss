@@ -14,11 +14,54 @@
     transform: translateY(-50%);
     overflow: hidden;
     display: inline-block;
+
+    @include mediaTo(md) {
+      width: 65vw;
+      transform: translateY(-50%);
+      max-width: $gutter * 50;
+    }
+
+    @include mediaTo(sm) {
+      width: 90vw;
+      transform: translateY(-50%);
+    }
   }
 
   &__image {
     @extend %image;
 
     transform: translateX(10%);
+  }
+
+  &__list {
+    @extend %reset-list;
+
+    gap: $xl;
+    margin-top: $xxl;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include mediaTo(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mediaTo(sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-top: $xl + $s;
+
+    &::before {
+      @extend %pseudo;
+
+      bottom: unset;
+      margin: auto;
+      width: $gutter * 0.1;
+      height: $xl - $s;
+      background-color: $special;
+    }
   }
 }

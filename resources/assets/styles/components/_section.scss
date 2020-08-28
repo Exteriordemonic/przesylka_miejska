@@ -18,11 +18,19 @@
   &--dark {
     background-color: $dark;
     color: $light;
+
+    .text-section__label {
+      color: $light;
+    }
   }
 
   &--special {
     background-color: $special;
     color: $light;
+
+    .text-section__label {
+      color: $light;
+    }
   }
 
   &__bg {

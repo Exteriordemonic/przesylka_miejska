@@ -9,7 +9,6 @@
     text-align: left;
 
     #{$root}__label {
-      color: $special;
       margin-bottom: $m;
     }
 
@@ -20,6 +19,8 @@
 
   &__label {
     @extend %textMajor;
+
+    color: $special;
   }
 
   &__title {

@@ -1,4 +1,8 @@
 .step {
+  &--center {
+    text-align: center;
+  }
+
   &__title {
     @extend %sectionSubtitle;
 
