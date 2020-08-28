@@ -5,6 +5,7 @@
 
   @include mediaTo(md) {
     display: block;
+    padding-bottom: 0;
   }
 
   &__wrapper {
@@ -21,6 +22,9 @@
 
     @include mediaTo(md) {
       position: relative;
+      max-width: $gutter * 70;
+      padding-top: 0;
+      padding-bottom: $xl;
     }
   }
 

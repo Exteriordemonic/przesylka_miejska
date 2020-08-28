@@ -8,6 +8,10 @@
   &--left {
     text-align: left;
 
+    @include mediaTo(md) {
+      text-align: center;
+    }
+
     #{$root}__label {
       margin-bottom: $m;
     }
