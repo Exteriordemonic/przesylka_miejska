@@ -7,6 +7,19 @@ const Testimonials = {
 
     if (this.testimonials.length) {
       this.initTestimonials();
+
+      setTimeout(() => {
+        this.icon = document.querySelectorAll('.quotes .flickity-button-icon');
+
+        if (this.icon) {
+          this.icon.forEach(e => {
+            e.setAttribute('viewBox', '0 0 30 30');
+          })
+
+          this.icon[0].setAttribute('transform', 'translate(0, 0) rotate(180)');
+          this.icon[1].querySelector('path').setAttribute('transform', 'translate(0, 0) rotate(0)');
+        }
+      }, 1000);
     }
   },
 
@@ -26,7 +39,7 @@ const Testimonials = {
       // or set time between advances in milliseconds
       // i.e. `autoPlay: 1000` will advance every 1 second
 
-      cellAlign: 'center',
+      cellAlign: 'left',
       // alignment of cells, 'center', 'left', or 'right'
       // or a decimal 0-1, 0 is beginning (left) of container, 1 is end (right)
 
@@ -91,6 +104,8 @@ const Testimonials = {
 
       wrapAround: true,
       // at end of cells, wraps-around to first for infinite scrolling
+
+      arrowShape: 'M14.721,28.88A14.159,14.159,0,1,0,.563,14.721,14.156,14.156,0,0,0,14.721,28.88ZM8.1,12.209h6.623V8.161a.686.686,0,0,1,1.17-.485l6.526,6.56a.679.679,0,0,1,0,.965l-6.526,6.56a.685.685,0,0,1-1.17-.485V17.233H8.1a.687.687,0,0,1-.685-.685V12.894A.687.687,0,0,1,8.1,12.209Z',
     });
   },
 }

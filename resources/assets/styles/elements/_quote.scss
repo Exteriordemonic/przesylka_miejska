@@ -1,0 +1,36 @@
+.quote {
+  max-width: $gutter * 50;
+  margin: 0 auto;
+
+  @include media(md) {
+    padding-right: $l;
+  }
+
+  &__icon {
+    margin-bottom: $l;
+  }
+
+  &__text {
+    @extend %text;
+
+    margin-bottom: $l;
+  }
+
+  &__title {
+    @extend %textMajor;
+
+    font-weight: $fw-bold;
+    margin-bottom: $xs;
+  }
+
+  &__link {
+    @extend %text;
+
+    color: initial;
+    transition: $transition;
+
+    &:hover {
+      color: $special;
+    }
+  }
+}

@@ -1,1 +1,70 @@
+.quotes {
+  padding-top: 232px;
+  position: relative;
+  margin-top: -235px;
+  clip-path: polygon(0 200px, 100% 0, 100% 100%, 0% 100%);
 
+  @include media(lg) {
+    margin-top: -240px;
+  }
+
+  &__wrapper {
+    @include media(sm) {
+      padding-right: 0;
+    }
+  }
+
+  @include mediaTo(md) {
+    margin-top: -132px;
+    clip-path: polygon(0 67px, 100% 0, 100% 100%, 0% 100%);
+    padding-top: 132px;
+  }
+
+  @include mediaTo(sm) {
+    margin-top: -160px;
+    clip-path: polygon(0 67px, 100% 0, 100% 100%, 0% 100%);
+    padding-top: 160px;
+  }
+
+  &__list {
+    @extend %reset-list;
+  }
+
+  &__item {
+    width: calc(100% / 4);
+
+    @include mediaTo(lg) {
+      width: calc(100% / 3);
+    }
+
+    @include mediaTo(md) {
+      width: 100%;
+    }
+  }
+
+  .flickity-button {
+    right: 0 !important;
+    left: unset !important;
+    bottom: unset;
+    top: 0;
+    transform: translateY(-150%);
+    background-color: transparent !important;
+
+    &.previous {
+      transform: translateY(-150%) translateX(-150%);
+    }
+
+    @include mediaTo(sm) {
+      display: none;
+    }
+  }
+
+  .flickity-button-icon {
+    fill: $special;
+    transition: $transition;
+
+    &:hover {
+      fill: darken($special, 20);
+    }
+  }
+}
