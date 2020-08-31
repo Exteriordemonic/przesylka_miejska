@@ -30,8 +30,24 @@
     margin-bottom: 0;
     justify-content: flex-end;
 
-    @include mediaTo(xs) {
-      display: none;
+    &__item {
+      @include mediaTo(xs) {
+        display: none;
+      }
+
+      &--space {
+        @include mediaTo(xs) {
+          display: flex;
+          margin-top: 0;
+
+          .button {
+            @include cssLock("font-size", 360, 1920, (12, 14));
+
+            padding: $xs $s;
+            min-width: auto;
+          }
+        }
+      }
     }
   }
 

@@ -14,8 +14,14 @@
         {{ $text }}
     </p>
     @if ($link)
-    <a href="{{ $link['url'] }}" class="step__button button button--light" target="_blank">
-        {{ $link['title'] }}
-    </a> 
+        @if ($contact)
+            <button data-toggle-popup data-one-url="@option('contact-troj')"  data-two-url="@option('contact-byd')" class="step__button button button--light">
+                {{ $link['title'] }}
+            </button> 
+        @else
+            <a href="{{ $link['url'] }}" class="step__button button button--light">
+                {{ $link['title'] }}
+            </a> 
+        @endif
     @endif
 </article>

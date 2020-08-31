@@ -2,6 +2,7 @@
 import 'jquery';
 import AOS from 'aos';
 import 'select2';
+import './components/smooth';
 
 // import everything from autoload
 import './autoload/**/*'
@@ -17,6 +18,8 @@ import citySwap from './components/citySwap';
 import Testimonials from './components/testimonials';
 import Count from './components/count';
 import Popup from './components/popup';
+import Form from './components/form';
+import Cookie from './components/cookies';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -37,6 +40,8 @@ jQuery(document).ready(() => {
     Testimonials.init();
     Count.init();
     Popup.init();
+    Form.init();
+    Cookie.init();
 
     window.dispatchEvent(new Event('resize'));
     $('.select').select2({

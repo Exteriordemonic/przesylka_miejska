@@ -12,6 +12,13 @@
     opacity: 0.6;
     transition: $transition;
 
+    @include mediaTo(sm) {
+      width: 50%;
+      margin: $s 0;
+      display: flex;
+      justify-content: center;
+    }
+
     &:hover {
       filter: grayscale(0);
       opacity: 1;

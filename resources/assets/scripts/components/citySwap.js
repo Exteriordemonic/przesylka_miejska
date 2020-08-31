@@ -8,8 +8,6 @@ const citySwap = {
 
     this.class = '-is-active';
 
-    console.log(this.city);
-
     if (this.length) {
       this.loop();
       this.city[this.current].classList.add(this.class);

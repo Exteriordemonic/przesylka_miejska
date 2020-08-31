@@ -42,6 +42,13 @@
     }
   }
 
+  &--small {
+    @extend %text;
+
+    padding: $xs $s;
+    min-width: auto;
+  }
+
   &--transparent {
     color: $light;
     border-color: currentColor;

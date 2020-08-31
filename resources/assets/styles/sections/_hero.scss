@@ -1,4 +1,6 @@
 .hero {
+  $root: &;
+
   @extend %flex;
 
   height: 100vh;
@@ -9,6 +11,17 @@
 
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    &--center {
+      justify-content: center;
+      text-align: center;
+
+      #{$root}__title {
+        &::first-line {
+          @include cssLock("font-size", 360, 1920, (100, 200));
+        }
+      }
+    }
   }
 
   &__title {

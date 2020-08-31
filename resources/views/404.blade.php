@@ -1,12 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
-
-  @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, but the page you were trying to view does not exist.', 'sage') }}
-    </div>
-    {!! get_search_form(false) !!}
-  @endif
+@php
+    $class = 'hero';
+@endphp
+<section class="section section--dark {{ $class }}">
+  <figure class="section__bg">
+      {!! image(option('404_image')['id'], 'full', 'section__image') !!}
+  </figure>
+  <div class="container {{ $class }}__wrapper {{ $class }}__wrapper--center">
+      <h1 class="{{ $class }}__title">@option('404_title')</h1>
+      @include('elements.button-list', ['error'=>'true'])
+  </div>
+</section>
 @endsection

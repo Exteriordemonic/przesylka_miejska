@@ -3,6 +3,8 @@
   @include('partials.head')
   <body {!! body_class() !!}>
     @php do_action('get_header') @endphp
+    <div class="preloader"></div>
+    @include('sections.cookies')
     @include('partials.header')
     @include('sections.popup')
     <div class="wrap" role="document">

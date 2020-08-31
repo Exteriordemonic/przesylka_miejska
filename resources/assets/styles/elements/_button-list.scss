@@ -15,6 +15,8 @@
   }
 
   &__item {
+    @extend %flex;
+
     margin-right: $m + $xs;
 
     @include mediaTo(sm) {

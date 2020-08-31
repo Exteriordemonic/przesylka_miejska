@@ -1,0 +1,19 @@
+.preloader {
+  @extend %fixed;
+
+  background-color: $light;
+  pointer-events: none;
+  animation: popOut $transition*2 both;
+  animation-delay: $transition*2;
+  z-index: z-index("preloader");
+}
+
+@keyframes popOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

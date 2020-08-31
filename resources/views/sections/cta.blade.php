@@ -2,7 +2,7 @@
     $class = 'cta';
 @endphp
 
-<section class="section {{ $class }}">
+<section class="section {{ $class }}" id="informacje">
     @set($image, get_field('cta_image')['ID'])
     @image($image, 'full', ['class'=>'cta__image'])
     <div class="container {{ $class }}__wrapper">

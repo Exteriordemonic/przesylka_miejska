@@ -2,7 +2,7 @@
     $class = 'steps';
 @endphp
 
-<section class="section section--dark {{ $class }}">
+<section class="section section--dark {{ $class }}" id="dzialanie">
     <div class="container {{ $class }}__wrapper">
         @set($textSection, get_field('steps_text'))
         @include('elements.text-section', [$textSection])

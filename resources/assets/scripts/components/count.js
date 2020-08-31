@@ -12,7 +12,6 @@ const Count = {
     if (this.counters) {
       setTimeout(() => {
         this.offset = this.counters[0].getBoundingClientRect().top - 300;
-        console.log('this.offset', this.offset);
         this.count();
       }, 1000);
     }

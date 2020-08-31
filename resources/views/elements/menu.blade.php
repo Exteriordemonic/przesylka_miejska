@@ -8,12 +8,12 @@
         </li>
         @endif
         <li class="menu__item">
-            <a href="@option('facebook')">
+            <a href="@option('facebook')" target="_blank">
                 @svg('facebook')
             </a>
         </li>
         <li class="menu__item">
-            <a href="@option('instagram')">
+            <a href="@option('instagram')" target="_blank">
             @svg('instagram')
             </a>
         </li>

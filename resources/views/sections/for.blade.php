@@ -2,7 +2,7 @@
     $class = 'for';
 @endphp
 
-<section class="section {{ $class }}">
+<section class="section {{ $class }}" id="dla-kogo">
     @svg('sign', $class.'__sign')
     <div class="container {{ $class }}__wrapper">
         @set($textSection, get_field('for_text'))
@@ -23,7 +23,7 @@
                 @set($step, get_field('for_offert'))
                 @set($step['direction'], 'center')
                 @set($step['type'], 'special')
-                @include('elements.step', ['step'=>$step])
+                @include('elements.step', ['step'=>$step, 'contact'=>true])
             </li>
         </ul>
         @endfield

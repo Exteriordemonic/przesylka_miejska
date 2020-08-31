@@ -1,7 +1,5 @@
 const Popup = {
   init() {
-    console.log('Init Popup');
-
     this.popup = document.querySelector('[data-popup]');
     this.toggle = document.querySelectorAll('[data-toggle-popup]');
 
@@ -38,8 +36,6 @@ const Popup = {
   setLinks(link1, link2) {
     this.link1.setAttribute('href', link1);
     this.link2.setAttribute('href', link2);
-
-    console.log(link1, link2);
   },
 
   toggleScrolls() {

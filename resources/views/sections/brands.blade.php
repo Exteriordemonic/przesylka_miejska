@@ -2,7 +2,7 @@
     $class = 'brands';
 @endphp
 
-<section class="section {{ $class }}">
+<section class="section {{ $class }}" id="firmy">
     <div class="container {{ $class }}__wrapper">
         @hasfield('brands')
         <ul class="{{ $class }}__list">

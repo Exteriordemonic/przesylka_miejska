@@ -2,7 +2,7 @@
     $class = 'flex';
 @endphp
 
-<section class="section {{ $class }}">
+<section class="section {{ $class }}" id="dowiedz-sie-wiecej">
     @svg('sign', $class.'__sign')
     <div class="container {{ $class }}__wrapper">
         @set($textSection, get_field('flex_text'))

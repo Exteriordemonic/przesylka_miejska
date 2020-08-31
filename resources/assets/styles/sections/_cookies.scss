@@ -1,0 +1,84 @@
+.cookies {
+  $root: &;
+
+  @extend %fixed;
+  @extend %flex;
+
+  top: unset;
+  z-index: z-index("cookies");
+  pointer-events: initial;
+  transition: $transition;
+  transition-delay: $transition*1.5;
+  animation: popIn $transition*2 both;
+  color: $special;
+  padding: 0;
+  background: $light;
+
+  &.-is-active {
+    transition-delay: 0s;
+    animation: popOut $transition*2 both;
+    animation-delay: $transition;
+    pointer-events: none;
+  }
+
+  &__wrapper {
+    @extend %flex;
+
+    justify-content: space-between;
+
+    @include media(md) {
+      padding: $s $l;
+      max-width: 100%;
+    }
+
+    @include mediaTo(md) {
+      height: 100vh;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__text {
+    @extend %text;
+
+    display: inline-block;
+    margin-right: $l;
+    margin-bottom: 0;
+
+    @include mediaTo(md) {
+      margin-right: 0;
+      margin-bottom: $l;
+      text-align: center;
+    }
+  }
+
+  .buttons-list {
+    display: inline-flex;
+    width: auto;
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY($xxl);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY($xxl);
+  }
+}

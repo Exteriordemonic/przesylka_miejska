@@ -45,15 +45,6 @@
   line-height: 1.9;
 }
 
-%text {
-  @extend %body;
-  @extend %resetSpaces;
-
-  @include cssLock("font-size", 360, 1920, (12, 14));
-
-  line-height: 1.9;
-}
-
 %numbers {
   @extend %body;
   @extend %resetSpaces;
@@ -75,4 +66,13 @@
   @extend %resetSpaces;
 
   @include cssLock("font-size", 360, 1920, (16, 18));
+}
+
+%text {
+  @extend %body;
+  @extend %resetSpaces;
+
+  @include cssLock("font-size", 360, 1920, (12, 14));
+
+  line-height: 1.9;
 }
