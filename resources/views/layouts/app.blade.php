@@ -4,6 +4,7 @@
   <body {!! body_class() !!}>
     @php do_action('get_header') @endphp
     @include('partials.header')
+    @include('sections.popup')
     <div class="wrap" role="document">
       <div class="content">
         <main class="main">

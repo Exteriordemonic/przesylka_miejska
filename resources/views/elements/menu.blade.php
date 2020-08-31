@@ -18,9 +18,9 @@
             </a>
         </li>
         <li class="menu__item menu__item--space">
-            <a href="@option('myacc')" class="button button--special button--icon">
+            <button data-toggle-popup data-one-url="@option('myacc-troj')"  data-two-url="@option('myacc-byd')" class="button button--special button--icon">
                 @svg('user') Moje konto
-            </a>
+            </button>
         </li>
     </ul>
 </nav>

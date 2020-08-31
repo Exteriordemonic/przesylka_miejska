@@ -13,3 +13,18 @@
         @endforeach
     </ul>
 @endif
+
+@if($popup) 
+<ul class="buttons-list buttons-list--center">
+    <li class="buttons-list__item">
+        <a href="" class="button button--light" data-one-link>
+            Trójmiasto
+        </a>
+    </li>     
+    <li class="buttons-list__item">
+        <a href="" class="button button--light" data-two-link>
+            Bydgoszcz
+        </a>
+    </li>     
+</ul>
+@endif

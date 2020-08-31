@@ -16,6 +16,7 @@ import aboutUs from './routes/about';
 import citySwap from './components/citySwap';
 import Testimonials from './components/testimonials';
 import Count from './components/count';
+import Popup from './components/popup';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -35,6 +36,7 @@ jQuery(document).ready(() => {
     citySwap.init();
     Testimonials.init();
     Count.init();
+    Popup.init();
 
     window.dispatchEvent(new Event('resize'));
     $('.select').select2({

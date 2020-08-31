@@ -11,6 +11,12 @@
   position: absolute;
 }
 
+%fixed {
+  @extend %position-0;
+
+  position: fixed;
+}
+
 %pseudo {
   @extend %absolute;
 
@@ -27,6 +33,14 @@
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+%reset-button {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
 }
 
 %image {

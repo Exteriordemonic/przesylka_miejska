@@ -1,0 +1,90 @@
+.popup {
+  $root: &;
+
+  @extend %fixed;
+  @extend %flex;
+
+  z-index: z-index("popup");
+  opacity: 0;
+  pointer-events: none;
+  transition: $transition;
+  transition-delay: $transition*1.5;
+
+  &.-is-active {
+    opacity: 1;
+    pointer-events: initial;
+    transition-delay: 0s;
+
+    #{$root}__wrapper {
+      animation: popIn $transition*2 both;
+      animation-delay: $transition;
+    }
+  }
+
+  &__close {
+    @extend %absolute;
+    @extend %textMajor;
+    @extend %reset-button;
+
+    left: unset;
+    bottom: unset;
+    font-weight: $fw-regular;
+    border: 0;
+    width: $l;
+    height: $l;
+    color: $light;
+    font-family: monospace;
+
+    @include mediaTo(md) {
+      font-size: $l;
+      width: $xl;
+      height: $xl;
+    }
+  }
+
+  &__wrapper {
+    @extend %flex;
+
+    flex-wrap: wrap;
+    animation: popOut $transition*2 both;
+
+    @include media(md) {
+      max-width: 600px;
+      padding: $xl;
+      border-radius: $xs;
+    }
+
+    @include mediaTo(md) {
+      height: 100vh;
+      flex-direction: column;
+    }
+  }
+
+  .text-section {
+    margin: 0 0 $l;
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY($xxl);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY($xxl);
+  }
+}

@@ -33,6 +33,10 @@
     }
   }
 
+  &--overlay {
+    background-color: rgba($dark, 0.8);
+  }
+
   &__bg {
     @extend %absolute;
 

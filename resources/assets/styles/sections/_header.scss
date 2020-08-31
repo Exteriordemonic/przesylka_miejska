@@ -2,10 +2,12 @@
   @extend %absolute;
 
   bottom: unset;
-  padding: $xl 0;
+  padding: $l 0;
   z-index: 10;
 
   img {
+    width: $xxl;
+
     @include mediaTo(xs) {
       width: $xl;
     }
@@ -14,8 +16,13 @@
   &__wrapper {
     @extend %flex;
 
+    padding-right: $xl;
+    padding-left: $xl;
+
     @include mediaTo(xs) {
       justify-content: flex-start;
+      padding-right: $l;
+      padding-left: $l;
     }
   }
 

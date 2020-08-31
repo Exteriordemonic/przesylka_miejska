@@ -3,6 +3,12 @@
 
   width: 100%;
   display: flex;
+  position: relative;
+  z-index: 10;
+
+  &--center {
+    justify-content: center;
+  }
 
   @include mediaTo(sm) {
     flex-wrap: wrap;
