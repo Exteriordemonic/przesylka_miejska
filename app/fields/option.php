@@ -17,6 +17,7 @@ $option_page
         ->addUrl('myacc-troj', ['label'=>'Trójmiasto link logowania'])
         ->addUrl('myacc-byd', ['label'=>'Bydgoszcz link logowania'])
     ->addTab('Kontakt')
+        ->addWysiwyg('contact', ['label'=>'Kontakt'])
         ->addUrl('contact-troj', ['label'=>'Trójmiasto link do kontaktu'])
         ->addUrl('contact-byd', ['label'=>'Bydgoszcz link do kontaktu'])
     ->addTab('Popup')

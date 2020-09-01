@@ -57,14 +57,23 @@
     position: relative;
     padding-top: $xl + $s;
 
-    &::before {
-      @extend %pseudo;
+    // &::before {
+    //   @extend %pseudo;
 
-      bottom: unset;
-      margin: auto;
-      width: $gutter * 0.1;
-      height: $xl - $s;
-      background-color: $special;
-    }
+    //   bottom: unset;
+    //   margin: auto;
+    //   width: $gutter * 0.1;
+    //   height: $xl - $s;
+    //   background-color: $special;
+    // }
+  }
+
+  &__icon {
+    @extend %pseudo;
+
+    bottom: unset;
+    margin: auto;
+    height: $l + $s;
+    width: auto;
   }
 }

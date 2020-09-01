@@ -6,7 +6,7 @@ const Count = {
   init() {
     this.counters = document.querySelectorAll('[data-counter]');
     this.options = {
-      separator: '',
+      separator: ' ',
     };
 
     if (this.counters) {

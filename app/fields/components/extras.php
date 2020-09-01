@@ -13,6 +13,7 @@ $extras
     ->addImage('extras_image', ['label'=>'Zdjęcie'])
     ->addRepeater('extras_list', ['label'=>'Extra', 'max'=>4])
         ->addGroup('content', ['label'=>''])
+            ->addImage('icon', ['label'=>'Ikona'])
             ->addText('title', ['label'=>'Tytuł'])
             ->addTextarea('text', ['label'=>'Treść'])
         ->endGroup();

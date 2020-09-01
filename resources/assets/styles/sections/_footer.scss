@@ -8,4 +8,34 @@
       flex-direction: column-reverse;
     }
   }
+
+  &__contact {
+    @extend %textMajor;
+
+    margin-bottom: $xl;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include mediaTo(md) {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: $xl;
+    }
+
+    h2 {
+      @extend %sectionTitle;
+
+      margin-bottom: $m;
+    }
+
+    a {
+      @extend %textMajor;
+
+      color: $special;
+
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+  }
 }

@@ -10,7 +10,10 @@
             <li class="{{ $class }}__item">
                 @set($number, get_sub_field('content'))
                 <span class="{{ $class }}__number">
-                    + <span class="{{ $class }}__counter" data-counter={{ $number['number'] }}>{{ $number['number'] }}</span>
+                    @if ($number['number'] > 0)
+                    +     
+                    @endif
+                    <span class="{{ $class }}__counter" data-counter={{ $number['number'] }}>{{ $number['number'] }}</span>
                 </span>
                 <div class="{{ $class }}__text">
                     {!! $number['text'] !!}

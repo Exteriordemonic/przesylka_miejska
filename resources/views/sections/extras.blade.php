@@ -12,6 +12,9 @@
             <li class="{{ $class }}__item">
                 @set($step, get_sub_field('content'))
                 @set($step['direction'], 'center')
+
+                @set($icon, $step['icon']['ID'])
+                @image($icon, 'full' ,['class' => 'extras__icon'])
                 @include('elements.step', ['step'=>$step])
             </li>
             @endfields

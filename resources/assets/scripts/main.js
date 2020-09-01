@@ -49,5 +49,6 @@ jQuery(document).ready(() => {
       placeholder: 'Wybierz miejscowość z listy',
     });
     AOS.init();
+
   }, 300)
 });
